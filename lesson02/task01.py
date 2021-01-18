@@ -19,7 +19,7 @@ def main():
     ]
 
     for item in different_types_arr:
-        print(f'Элемент типа {type(item)} с занчением {item}')
+        print(f'Элемент типа {type(item)} с значением {item}')
 
 
 if __name__ == '__main__':
