@@ -11,6 +11,7 @@
 
 
 def sum_numbers_space_separated(string):
+    """Функция сложения чисел в строке, разделенных пробелами"""
     return sum(map(lambda x: int(x), string.split()))
 
 

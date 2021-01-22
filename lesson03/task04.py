@@ -9,14 +9,15 @@
 
 
 def my_func(x, y):
+    """Функция возведения в степень"""
     if y == 0:
         return 1
-    mult = 1
+    multi = 1
     for i in range(abs(y)):
-        mult *= x
+        multi *= x
     if y > 0:
-        return mult
-    return 1 / mult
+        return multi
+    return 1 / multi
 
 
 def main():

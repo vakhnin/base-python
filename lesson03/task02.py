@@ -8,6 +8,7 @@
 
 
 def user(name, surname, birth_year, city, email, phone):
+    """Функция формирования строки данных пользователя"""
     print(f'Имя:{name} Фамилия:{surname} Год рождения:{birth_year} '
           f'Город проживания:{city} email:{email} Телефон:{phone}')
 

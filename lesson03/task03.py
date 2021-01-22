@@ -6,6 +6,7 @@
 
 
 def my_func(x, y, z):
+    """Функция выдачи двух больших чисел из трех"""
     sorted_vals = sorted((x, y, z))
     return sorted_vals[-1] + sorted_vals[-2]
 
