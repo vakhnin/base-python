@@ -16,6 +16,5 @@ def main():
     print(target_list)
 
 
-
 if __name__ == '__main__':
     main()
