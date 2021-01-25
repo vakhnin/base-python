@@ -9,7 +9,8 @@ from functools import reduce
 
 
 def main():
-    multi_short = reduce(lambda x, y: x * y, [i for i in range(100, 1001, 2)])
+    my_list = [i for i in range(100, 1001, 2)]
+    multi_short = reduce(lambda x, y: x * y, my_list)
     print(multi_short)
 
     # Проверка правильности вычислений
