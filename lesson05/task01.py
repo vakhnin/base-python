@@ -9,7 +9,7 @@ import os
 
 def main():
     try:
-        with open(os.path.join('data', 'text.txt'), 'w') as f:
+        with open(os.path.join('data', 'task01.txt'), 'w') as f:
             while True:
                 my_str = input('Введите строку для файла (Enter для выхода): ')
                 if not my_str:
