@@ -12,7 +12,7 @@ length (длина), width (ширина).
 """
 
 
-class Road():
+class Road:
     _length = 0
     _width = 0
 
