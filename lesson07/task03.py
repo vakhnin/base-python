@@ -41,13 +41,13 @@ class Cell:
 
     def __add__(self, other):
         if not isinstance(other, Cell):
-            raise NotImplemented('Операция не опреденена '
+            raise NotImplemented('Операция не определена '
                                  'для не клеток')
         return Cell(self.count + other.count)
 
     def __sub__(self, other):
         if not isinstance(other, Cell):
-            raise NotImplemented('Операция не опреденена '
+            raise NotImplemented('Операция не определена '
                                  'для не клеток')
         if self.count <= other.count:
             print('Вычитание невозможно! '
@@ -57,13 +57,13 @@ class Cell:
 
     def __mul__(self, other):
         if not isinstance(other, Cell):
-            raise NotImplemented('Операция не опреденена '
+            raise NotImplemented('Операция не определена '
                                  'для не клеток')
         return Cell(self.count * other.count)
 
     def __truediv__(self, other):
         if not isinstance(other, Cell):
-            raise NotImplemented('Операция не опреденена '
+            raise NotImplemented('Операция не определена '
                                  'для не клеток')
         return Cell(round(self.count / other.count))
 
