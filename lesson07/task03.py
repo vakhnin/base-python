@@ -35,17 +35,20 @@
 class Cell:
     def __init__(self, count: int):
         if count < 0:
-            raise ValueError
+            raise ValueError('Количество клеток '
+                             'не может быть отрицательным')
         self.count = count
 
     def __add__(self, other):
         if not isinstance(other, Cell):
-            raise NotImplemented
+            raise NotImplemented('Операция не опреденена '
+                                 'для не клеток')
         return Cell(self.count + other.count)
 
     def __sub__(self, other):
         if not isinstance(other, Cell):
-            raise NotImplemented
+            raise NotImplemented('Операция не опреденена '
+                                 'для не клеток')
         if self.count <= other.count:
             print('Вычитание невозможно! '
                   'Второй параметр не меньше первого.')
@@ -54,12 +57,14 @@ class Cell:
 
     def __mul__(self, other):
         if not isinstance(other, Cell):
-            raise NotImplemented
+            raise NotImplemented('Операция не опреденена '
+                                 'для не клеток')
         return Cell(self.count * other.count)
 
     def __truediv__(self, other):
         if not isinstance(other, Cell):
-            raise NotImplemented
+            raise NotImplemented('Операция не опреденена '
+                                 'для не клеток')
         return Cell(round(self.count / other.count))
 
     def __str__(self):

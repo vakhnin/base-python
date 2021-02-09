@@ -56,15 +56,15 @@ class Matrix:
         row_len = len(matrix[0])
         for row in matrix:
             if row_len != len(row):
-                raise ValueError
+                raise ValueError('Ошибка с размерностью матрицы')
 
     @staticmethod
     def check_matrices_dimensions(matrix1: List[List], matrix2: List[List]):
         if len(matrix1) != len(matrix2):
-            raise ValueError
+            raise ValueError('Размерности матриц не равны')
         for y in range(len(matrix1)):
             if len(matrix1[y]) != len(matrix2[y]):
-                raise ValueError
+                raise ValueError('Размерности матриц не равны')
 
 
 def main():
