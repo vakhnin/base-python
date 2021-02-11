@@ -22,6 +22,9 @@ class Date:
 
     @classmethod
     def str_to_date(cls, date):
+        if len(date.split('-')) > 3:
+            print('Неверный формат строки')
+            return 0, 0, 0
         return map(lambda x: int(x), date.split('-'))
 
     @staticmethod
@@ -48,11 +51,14 @@ def main():
     date2 = Date('30-02-2000')
     print(date2.__dict__)
 
-    date2 = Date('28-02-2000')
-    print(date2.__dict__)
+    date3 = Date('28-02-2000')
+    print(date3.__dict__)
 
-    date2 = Date('31-12-2000')
-    print(date2.__dict__)
+    date4 = Date('31-12-2000')
+    print(date4.__dict__)
+
+    date5 = Date('31-12-2000-000')
+    print(date5.__dict__)
 
 
 if __name__ == '__main__':
