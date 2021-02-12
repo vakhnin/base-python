@@ -8,19 +8,7 @@
 В классах-наследниках реализовать параметры,
 уникальные для каждого типа оргтехники.
 """
-
-
-class Storage:
-    storage: list
-
-    def __init__(self):
-        self.storage = []
-
-    def __repr__(self):
-        return str(self.storage)
-
-    def add_to_storage(self, equipment):
-        self.storage.append(equipment)
+from typing import Dict
 
 
 class Equipment:
@@ -60,20 +48,33 @@ class Xerox(Equipment):
         self.is_two_sides = is_two_sides
 
 
+class Storage:
+    storage: {}
+
+    def __init__(self):
+        self.storage = {}
+
+    def __repr__(self):
+        return str(self.storage)
+
+    def add_position(self, equipment):
+        self.storage[equipment] = 0
+
+
 def main():
     storage = Storage()
     print(storage)
     print()
 
-    storage.add_to_storage(Xerox('xerox1', 15000))
+    storage.add_position(Xerox('xerox1', 15000))
     print(storage)
     print()
 
-    storage.add_to_storage(Scaner('scaner2', 5000, is_hand_scaner=False))
+    storage.add_position(Scaner('scaner2', 5000, is_hand_scaner=False))
     print(storage)
     print()
 
-    storage.add_to_storage(Printer('printer3', 7000))
+    storage.add_position(Printer('printer3', 7000))
     print(storage)
     print()
 
